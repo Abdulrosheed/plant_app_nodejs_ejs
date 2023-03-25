@@ -1,0 +1,33 @@
+{
+  "name": "plant_app",
+  "version": "1.0.0",
+  "description": "A school project that can give a details of any plant",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crud",
+    "mysql"
+  ],
+  "author": "Rashford",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/translate": "^7.2.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "nodemon": "^2.0.21",
+    "sequelize": "^6.29.3",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.3",
+    "translate": "^1.4.1"
+  }
+}

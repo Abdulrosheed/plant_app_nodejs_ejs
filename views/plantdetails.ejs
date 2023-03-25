@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="/img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- ***** Top Header Area ***** -->
+       
+
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+                        <!-- Nav Brand -->
+                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <!-- <ul>
+                                    <li><a href="/dashboard">Home</a></li>
+                                    
+                                </ul> -->
+
+                            
+
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
+            <h2><%=name %></h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Blog Content Area Start ##### -->
+    <section class="blog-content-area section-padding-0-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Blog Posts Area -->
+                <div class="col-12 col-md-8">
+                    <div class="blog-posts-area">
+
+                        <!-- Post Details Area -->
+                        <div class="single-post-details-area">
+                            <div class="post-content">
+                                <!-- <h4 class="post-title">Garden designers across the country forecast ideas shaping the gardening world in 2018</h4>
+                                <div class="post-meta mb-30">
+                                    <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Jun 2018</a>
+                                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Mason Jenkins</a>
+                                </div> -->
+                                <div class="post-thumbnail mb-30">
+                                    <img src="/images/<%= data.imagePics  %>" alt="">
+                                </div>
+                                
+                                <div class="row mb-30">
+
+                                <div class="col-lg-7">
+                                        <p id="description" class=<%= lang %>><%= data.description %></p>
+                                </div>
+
+                                    <div class="col-lg-5">
+                                        <img src="/images/<%= data.imagePics2 %>" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Post Tags & Share -->
+                       
+
+                        <!-- Comment Area Start -->
+                        <div class="comment_area clearfix">
+                            <% if(commentData && commentData.length) {%>
+                            <h4 class="headline"><%= commentData.length %> Comments</h4>
+
+                            <ol>
+                                <!-- Single Comment Area -->
+                                <% commentData.forEach(element => { %>
+                                        
+                                
+                                    <li class="single_comment_area">
+                                        <div class="comment-wrapper d-flex">
+                                            <!-- Comment Meta -->
+                                            <div class="comment-author">
+                                            </div>
+                                            <!-- Comment Content -->
+                                            <div class="comment-content">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5><%= element.name %></h5>
+                                                    <span class="comment-date"><%= element.email %></span>
+
+                                                </div>
+                                                <p class="comment-class"><%= element.comment %></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                <% }) %>
+                                
+                                
+                            </ol>
+                            <% } %>
+                        </div>
+
+                        <!-- Leave A Comment -->
+                        <div class="leave-comment-area clearfix">
+                            <div class="comment-form">
+                                <h4 class="headline">Leave A Comment</h4>
+
+                                <div class="contact-form-area">
+                                    <!-- Comment Form -->
+                                    <form  method="post" id="my-form">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="contact-name" style="font-size:1.2em; color: black;" placeholder="Name" name="name">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="contact-email"  style="font-size: 1.2em ; color: black;" placeholder="Email" name="email">
+                                                </div>
+                                            </div>
+                                           
+                                                <input type="text" class="form-control"  name="plantId" style="visibility: hidden;" value=<%= data._id %>>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <textarea  style="font-size: 1.2em ;color: black;" class="form-control" name="comment" id="message" cols="30" rows="10" placeholder="Comment"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn alazea-btn">Post Comment</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Blog Sidebar Area -->
+                
+            </div>
+        </div>
+    </section>
+    <!-- ##### Blog Content Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="https://cdn.jsdelivr.net/npm/translate@1/translate.min.js"></script>
+
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/js/active.js"></script>
+    <script src="/translate.js"></script>
+</body>
+
+</html>
