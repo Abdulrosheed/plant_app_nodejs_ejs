@@ -2638,6 +2638,15 @@ img {
     margin-bottom: 0; }
   .portfolio-details-meta:last-child {
     margin-bottom: 0; }
+    .back-btn {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
 /* ======= The End ======= */
 
