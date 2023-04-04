@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 const session = require('express-session')
 const connectDb = require('./server/database/applicationContext');
 const plantRouter = require('./server/routers/plantRouter');
@@ -27,6 +28,9 @@ connectDb();
 //Used to parse request to js objects
 app.use(bodyparser.urlencoded({extended : true}));
 
+// enable cors
+app.use(cors());
+app.options('*', cors());
 
 app.use(plantRouter);
 app.use(commentRouter);
